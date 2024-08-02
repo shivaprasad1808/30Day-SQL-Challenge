@@ -39,6 +39,7 @@ insert into users(user_id, item, purchase_date, amount) values
 select * from users order by user_id, purchase_date;
 
 --Solution
+
  with CTE as ( select distinct user_id, purchase_date as current_purchase_date from USERS)  
 ,CTE2 as(
 select user_id, current_purchase_date, lag(current_purchase_date) over(partition by user_id order by current_purchase_date)
