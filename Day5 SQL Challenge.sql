@@ -142,7 +142,7 @@ values
 select * from amazon_books;
 select * from book_orders;
 
-
+----SOLUTION----
 with monthly_sales as (
 select  year(order_date) as year, month(order_date) as month, 
 sum(quantity*unit_price) as sales_per_month
