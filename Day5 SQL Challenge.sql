@@ -1,6 +1,5 @@
 /*Day5*/
---Write an sql query to output sales for that month, rolling average sales per month,
-rolling average sales per each month of an year
+--Write an sql query to output sales for each month, rolling average sales per month, rolling average sales per each month of an year
  
 create table amazon_books (book_id varchar(5),	book_title varchar(50), 	unit_price int    )
 
