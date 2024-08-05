@@ -2,7 +2,6 @@
 ---Query: For each region, find the house that has won maximum number of battles. Display region, house, number of wins
 
 
-use sqlchallenge
 
 create table king_data(k_no int, king varchar(30), house varchar(30))
 
