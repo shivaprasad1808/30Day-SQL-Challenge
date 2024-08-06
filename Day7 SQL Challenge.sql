@@ -1,9 +1,11 @@
 /*DAY 07*/
+/*
 #Query: Write a query to report the difference between the number of Cakes and Pies sold each day.
 Output should include the date sold, the difference between cakes and pies, and which one sold more (cake or pie). 
 The difference should be a positive number. If nothing is sold on a given day, output has to be 'nothing_sold'.
 If both Cake and Pie are sold in same number on a given day, then output has to be 'Cake and Pie sold equally'.
 Return the result table ordered by Date_Sold.
+*/
 
  
 create table desserts_new(date_sold date, product varchar(10), amount_sold int);
@@ -52,11 +54,13 @@ end as sold_more
 from CTE  group by date_sold;
 
 
- ------------
+/*
  Order of Case statements should be same, if the condition 'Cake and Pie sold equally' is addd before 'nothing_sold', 
  output will be incorrect, because even if nothing is sold for both cake and pie on a given day,
  sold_more column will show as 'Cake and Pie sold equally' which is incorrect.
+ */
 
 
+ 
 
  
