@@ -1,3 +1,5 @@
+/*Data can be downloaded from below link
+https://www.kaggle.com/datasets/shudhanshusingh/az-medicine-dataset-of-india */
 
 select * from medicines;
 
