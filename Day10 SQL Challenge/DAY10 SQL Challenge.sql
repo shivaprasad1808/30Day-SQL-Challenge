@@ -1,4 +1,7 @@
 /* Below are list of SQL queries for Day10 SQL Challenge */ 
+/* original data can be downloaded from 
+https://www.kaggle.com/code/arvinthsss/sql-syntax-series-using-netflix-dataset/input */
+
 select * from netflix order by show_id
 
 /* Query1
