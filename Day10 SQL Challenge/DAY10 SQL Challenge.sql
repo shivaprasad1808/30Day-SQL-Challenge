@@ -1,6 +1,4 @@
-use sqlchallenge
-
- 
+/* Below are list of SQL queries for Day10 SQL Challenge */ 
 select * from netflix order by show_id
 
 /* Query1
@@ -97,6 +95,7 @@ count(case when type = 'Movie' then 1 end) as movie_count,
 count(case when type = 'TV Show' then 1 end) as show_count
 from CTE group by country
 order by country;
+
 
 
 
