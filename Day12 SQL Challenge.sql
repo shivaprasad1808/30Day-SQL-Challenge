@@ -29,13 +29,6 @@ select * from products_new;
 select * from orders_new;
 
 
-insert into orders_new
-values
-(7,'2024-02-28', 100),
-(8,'2024-03-05', 100)
-
-
-
 with CTE as (
 select distinct p.product_id, o.order_date,  price,
 row_number() over(partition by p.product_id, o.order_date order by price_date desc) as rn
