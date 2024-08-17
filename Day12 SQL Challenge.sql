@@ -1,7 +1,6 @@
-use ankitbansal;
 
-create table products_new(product_id int, price_date date, price int)
-create table orders_new(order_id int, order_date date, product_id int)
+create table products_new(product_id int, price_date date, price int);
+create table orders_new(order_id int, order_date date, product_id int);
 
 insert into products_new values
 (100, '2024-01-01', 150),
