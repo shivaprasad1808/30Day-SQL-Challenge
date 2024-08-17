@@ -1,5 +1,3 @@
-use ankitbansal;
-
 create table products_new(product_id int, price_date date, price int)
 create table orders_new(order_id int, order_date date, product_id int)
 
