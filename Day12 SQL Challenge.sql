@@ -1,3 +1,14 @@
+/*
+Query: Write an SQL query to calculate the total sales value for each product,
+  considering the cost of the product at the time of the order date, 
+  output in ascending order of the product_id.
+  
+You are given a products table where a new row is inserted every time the price 
+  of a product changes. Additionally, there is a transaction table containing details
+  such as order_date and product_id for each order.
+
+*/
+
 
 create table products_new(product_id int, price_date date, price int);
 create table orders_new(order_id int, order_date date, product_id int);
