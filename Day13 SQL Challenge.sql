@@ -1,4 +1,16 @@
-use techtfq
+/*
+Query:  Write an SQL query to get the table in the form of kms travelled by the car on 
+a given day and not the sum of the total distance?
+
+Suppose you have a car travelling certain distance and the data is presented as follows -
+Day 1 - 50 km
+Day 2 - 100 km
+Day 3 - 200 km
+
+Now the distance is a cumulative sum as in
+row2 = (kms travelled on that day + row1 kms).
+
+*/
 
 create table car_travels(cars varchar(10), days varchar(10), cummulative_distance int)
 
