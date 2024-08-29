@@ -1,5 +1,7 @@
-use pharma
-
+ /*
+from pharma-data5 file, export data from sheet1 to sheet4 to SQL Server into different tables and transfer data from 
+4 tables to a single table to get 254082 records
+*/
 select * from pharma_sales1;
  
 
