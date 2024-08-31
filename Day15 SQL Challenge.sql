@@ -1,4 +1,3 @@
-use analyst
 
 --Write SQL query to find the total sales for weekend day (Saturday and Sunday) for each week in July 2024.
 
