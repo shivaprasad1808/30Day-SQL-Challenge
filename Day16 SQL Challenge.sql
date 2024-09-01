@@ -1,4 +1,3 @@
-use analyst;
 /*
 Query1: Write SQL query to find maximum id without duplicates
 */
@@ -15,8 +14,6 @@ insert into users2 values
 (9);
  
 select * from user2;
-
-
 
 select top 1 id from user2 where id not in(
 select id from user2
