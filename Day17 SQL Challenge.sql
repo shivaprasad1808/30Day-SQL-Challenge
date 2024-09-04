@@ -1,4 +1,9 @@
-use datalemur
+/*
+This question is from Datalemur: https://datalemur.com/blog/advanced-sql-interview-questions
+
+#Query:  Write SQL query to identify any payments made at the same merchant with the same credit card
+for the same amount within 10 minutes of each other and reporting the count of such repeated payments.
+*/
 
 create table Payments(	transaction_id int, merchant_id int, credit_card_id int, amount int, transaction_timestamp datetime)
 
