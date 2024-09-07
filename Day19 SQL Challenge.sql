@@ -8,8 +8,6 @@ or not each user has a subscription date range that overlaps with any other comp
 
 */
 
-use stratascratch
-
 create table subscriptions(user_id int, start_date date, end_date date);
 
 insert into subscriptions values
@@ -18,12 +16,10 @@ insert into subscriptions values
 (3,	'2019-01-29',	'2019-02-04'),
 (4,	'2019-02-05',	'2019-02-10');
 
-
 select * from subscriptions;
-
 
 select   a.user_id,
 max(case when a.start_date<=b.end_date and b.start_date >= a.end_date then 1 else 0 end)   as rn 
 from subscriptions a join subscriptions b
 on a.user_id <> b.user_id
- group by a.user_id
+ group by a.user_id;
