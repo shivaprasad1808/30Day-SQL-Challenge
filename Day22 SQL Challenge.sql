@@ -1,4 +1,3 @@
-use ankitbansal
 
 /*
 #Query: Write an SQL Query to find no of medals per swimmer for swimmers who won gold medal only.
