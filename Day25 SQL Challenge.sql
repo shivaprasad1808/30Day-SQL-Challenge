@@ -1,9 +1,6 @@
-use leetcode
-
 /*
 Query:
 Write a solution to find employees who have the highest salary in each of the departments.
-
 */
 
 create table Employee(id int, name varchar(20), salary int, departmentId int);
@@ -21,10 +18,8 @@ insert into Employee values
  (1, 'IT'),
  (2, 'Sales');
 
-
 select * from Employee;
 select * from Department;
-
 
 with CTE as(
 select d.name as Department, e.name as Employee, salary as max_salary,
