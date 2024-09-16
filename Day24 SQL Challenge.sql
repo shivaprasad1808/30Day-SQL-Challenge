@@ -18,14 +18,11 @@ insert into activity values
  (3,        2,           '2019-07-21',     'end_session'),   
  (4,        3,           '2019-06-25',     'open_session'),  
  (4,        3,           '2019-06-25',     'end_session'); 
- 
 
 
- select * from activity;
+select * from activity;
 
 
-
- 
 select activity_date as day,   count(distinct user_id) as  active_users
 from Activity
 where activity_date between dateadd(day, -30, '2019-07-27') and  '2019-07-27'
