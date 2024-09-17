@@ -22,24 +22,20 @@ insert into delivery values
 
  select * from Delivery;
 
-WITH CTE AS (
-    SELECT 
-        customer_id, 
-        order_date, 
-        customer_pref_delivery_date,
-        ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date) AS rn,
-        CASE 
-            WHEN order_date = customer_pref_delivery_date THEN 'immediate' 
-            ELSE 'scheduled' 
-        END AS status
-	 FROM Delivery)
- SELECT 
-    CAST(
-        (COUNT(CASE WHEN rn = 1 AND status = 'immediate' THEN 1 END) * 100.0) / 
-        COUNT(CASE WHEN rn = 1 THEN 1 END) 
-    AS DECIMAL(5, 2)
-    ) AS immediate_order_percentage
+ WITH CTE AS (
+SELECT 
+customer_id, 
+order_date, 
+customer_pref_delivery_date,
+ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date) AS rn,
+CASE 
+WHEN order_date = customer_pref_delivery_date THEN 'immediate' 
+ELSE 'scheduled' 
+END AS status
+FROM Delivery)
+SELECT 
+CAST(
+(COUNT(CASE WHEN rn = 1 AND status = 'immediate' THEN 1 END) * 100.0) / 
+COUNT(CASE WHEN rn = 1 THEN 1 END) 
+AS DECIMAL(5, 2)) AS immediate_order_percentage
 FROM CTE;
-
-
- 
