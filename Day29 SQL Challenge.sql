@@ -1,7 +1,5 @@
-use leetcode
-
 /*
-
+Query:
 Write SQL Query to report the period_state for each continuous interval of days .
 period_state is 'failed' if tasks in this interval failed or 'succeeded' if tasks in this interval succeeded.
 Interval of days are retrieved as start_date and end_date.
