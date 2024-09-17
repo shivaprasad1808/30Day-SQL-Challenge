@@ -22,15 +22,6 @@ insert into delivery values
 
  select * from Delivery;
 
- with CTE as (
- select customer_id, order_date, customer_pref_delivery_date,
- ROW_NUMBER() over(partition by customer_id order by order_date) as rn,
- case when order_date = customer_pref_delivery_date then 'immediate' else 'scheduled' end as status
- from Delivery)
- select count(*) from CTE where rn = 1 and status = 'immediate' / 
- (select count(*) as dd from CTE where rn=1) *100;
-
-
 WITH CTE AS (
     SELECT 
         customer_id, 
